@@ -1,0 +1,55 @@
+.rbc-header {
+  color: var(--color-foreground) !important;
+  font-size: 14px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px !important;
+  background: var(--color-background) !important;
+}
+
+.rbc-time-header-cell .rbc-today {
+  background-color: var(--color-accent) !important;
+}
+
+.rbc-time-slot {
+  color: var(--color-muted-foreground);
+  z-index: 1;
+}
+
+.rbc-time-slot:not(.rbc-today .rbc-time-slot) {
+  background-color: var(--color-background) !important;
+}
+
+/*Event Styles*/
+.rbc-event,
+.rbc-background-event {
+  z-index: 2;
+  padding: 0px !important;
+  border: none !important;
+}
+
+.rbc-event-label {
+  display: none !important;
+}
+
+.rbc-events-container {
+  width: 100% !important;
+}
+
+/*Timeslots Customization*/
+.rbc-day-slot .rbc-time-slot:after {
+  content: "";
+  width: 100%;
+  border-top: 1px solid #ee670e;
+  display: block;
+}
+
+.rbc-day-bg.rbc-today {
+  background-color: var(--color-accent) !important;
+}
+/* Off-range dates (previous/next month) */
+.rbc-month-view .rbc-off-range {
+  color: var(--color-muted);
+  opacity: 0.8;
+}
